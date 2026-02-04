@@ -1,0 +1,109 @@
+/* ============================================
+   BLOSSOM (Powerpuff Girls) Theme – Global
+   Pink, cheerful, superhero vibes
+   ============================================ */
+:root {
+  /* Blossom colors */
+  --blossom-pink: #ff69b4;
+  --blossom-pink-dark: #e91e8c;
+  --blossom-pink-light: #ffb6d9;
+  --blossom-bg: #1a0a12;
+  --blossom-card: rgba(255, 105, 180, 0.08);
+  --blossom-border: rgba(255, 105, 180, 0.25);
+  --blossom-text: #fff0f5;
+  --blossom-text-muted: #c9a0b8;
+  --blossom-glow: rgba(255, 105, 180, 0.4);
+  font-family: 'Fredoka', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--blossom-text);
+  background: var(--blossom-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Blossom keyframe animations */
+@keyframes blossom-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Flying: gentle float + sway so Blossom looks like she's flying */
+@keyframes blossom-flying {
+  0%, 100% {
+    transform: translateY(0) translateX(0) rotate(-2deg);
+  }
+  25% {
+    transform: translateY(-8px) translateX(4px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-4px) translateX(-3px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-10px) translateX(2px) rotate(-1deg);
+  }
+}
+
+@keyframes sparkle-twinkle {
+  0%, 100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+
+@keyframes glitter-drifting {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translate(0, 0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(3px, -6px) scale(1.2);
+  }
+}
+
+@keyframes blossom-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px var(--blossom-glow); }
+  50% { box-shadow: 0 0 35px var(--blossom-glow); }
+}
+
+@keyframes blossom-typing-dot {
+  0%, 60%, 100% { opacity: 0.3; transform: scale(0.8); }
+  30% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes message-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
