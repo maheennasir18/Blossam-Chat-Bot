@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { streamChatCompletion, type ChatMessage } from '../api/openWebUI'
 import type { Message } from '../types/chat'
 import { BLOSSOM_SYSTEM_PROMPT, INITIAL_MESSAGE } from '../constants/blossom'
-import { isApiError429Or500, getMockAnswerForQuestion } from '../utils/mockAnswers'
+import { isApiError429Or500, getMockAnswerForQuestion, parseApiErrorMessage } from '../utils/mockAnswers'
 
 export function useChat() {
   const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE])
@@ -71,7 +71,7 @@ export function useChat() {
           }
         )
       } catch (err) {
-        const message = err instanceof Error ? err.message : 'Something went wrong'
+        const message = parseApiErrorMessage(err)
         const useMock = isApiError429Or500(err)
         if (useMock) {
           setError(
