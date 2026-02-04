@@ -55,7 +55,7 @@ Edit `.env` and set your key:
 npm run dev
 ```
 
-Open **http://localhost:5173** in your browser. You should see Blossom’s chat; type a message and she’ll reply using Gemini (default: `gemini-2.0-flash-lite`).
+Open **http://localhost:3001** in your browser. You should see Blossom’s chat; type a message and she’ll reply using Gemini (default: `gemini-2.0-flash-lite`).
 
 ---
 
@@ -106,7 +106,7 @@ Blossam-Chat-Bot/
 
 | Command | Description |
 |--------|-------------|
-| `npm run dev` | Start dev server at http://localhost:5173 |
+| `npm run dev` | Start dev server at http://localhost:3001 |
 | `npm run build` | TypeScript check + production build (output in `dist/`) |
 | `npm run preview` | Serve the production build locally |
 
